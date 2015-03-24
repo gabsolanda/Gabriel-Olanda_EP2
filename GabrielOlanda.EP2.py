@@ -34,7 +34,7 @@ for i in range(1):
     turtle.penup()
     turtle.setpos(-300,0)
     turtle.pendown()
-    turtle.speed(990)
+    turtle.speed(5)
     turtle.pensize(5)
     dist = 150
     ang = 90
