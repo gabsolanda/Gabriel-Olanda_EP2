@@ -28,6 +28,8 @@ c = len(escolhaPC)
 print(escolhaPC)
 turtle = turtle.Turtle()  # Cria um objeto "desenhador"
 
+######################################################
+
 #Desenhando a trave da forca
 
 for i in range(1):
@@ -49,6 +51,10 @@ for i in range(1):
     turtle.setpos(-185,0)
     turtle.left(90)
     
+
+    
+######################################################
+    
 # Fazendo os espaços das letras
 
 for i in range(c):
@@ -60,7 +66,18 @@ for i in range(c):
     turtle.forward(17)
     turtle.pendown()
     
+####################################################
+
     
-    
-    
+letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
+
+while len(letra) != 1:
+    letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
+
+#if letra in escolhaPC:
+
+
+
+
+
 window.exitonclick()
