@@ -89,15 +89,30 @@ tor.right(90)
 tor.forward(50)
 
 ####################################################
-    # Fazendo o corpo = Perda da Direita
+    # Fazendo o corpo = Perna da Direita
 pernad = turtle.Turtle()
 pernad.color("white")
 pernad.pensize(2)
 pernad.penup()
 pernad.setpos(-220,43)
 pernad.pd()
-pernad.right(60)
+pernad.right(45)
 pernad.forward(25)
+
+####################################################
+    # Fazendo o corpo = Perna da Esquerda
+pernae = turtle.Turtle()
+pernae.color("white")
+pernae.pensize(2)
+pernae.penup()
+pernae.setpos(-220,43)
+pernae.pd()
+pernae.right(135)
+pernae.forward(25)
+
+####################################################
+    # Fazendo o corpo = Braço da Direita
+
 
     
 #letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
