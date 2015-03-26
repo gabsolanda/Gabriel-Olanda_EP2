@@ -6,6 +6,7 @@ Created on Mon Mar 23 08:10:52 2015
 """
 from random import choice
 
+
 import turtle               # Iniciando e importando a biblioteca Turtle
 window = turtle.Screen()    # Criando uma janela para a função Turtle
 window.bgcolor("silver")
@@ -21,11 +22,15 @@ Llimpa = []
 
 for e in lista:
     t = e.strip()
-    Llimpa.append(t)
+    if t !='':
+        Llimpa.append(t)
+    
     
 escolhaPC = choice(Llimpa)
 c = len(escolhaPC)
 print(escolhaPC)
+
+
 grade = turtle.Turtle()  # Cria um objeto "desenhador"
 
 ######################################################
@@ -64,7 +69,6 @@ for i in range(c):
     grade.penup()
     grade.forward(17)
     grade.pendown()
-    
     
     
 ####################################################
@@ -112,19 +116,49 @@ pernae.forward(25)
 
 ####################################################
     # Fazendo o corpo = Braço da Direita
+bracod = turtle.Turtle()
+bracod.color("white")
+bracod.pensize(2)
+bracod.penup()
+bracod.setpos(-220,75)
+bracod.pd()
+bracod.right(45)
+bracod.forward(25)
+
+####################################################
+    # Fazendo o corpo = Braço da Esquerda
+bracoe = turtle.Turtle()
+bracoe.color("white")
+bracoe.pensize(2)
+bracoe.penup()
+bracoe.setpos(-220,75)
+bracoe.pd()
+bracoe.right(135)
+bracoe.forward(25)
+
+####################################################
+
+letras = turtle.Turtle()
+letras.pu()
+letras.setpos(-185,0)
+letras.pd()
+
+#letras.write("The forca mininu", True, align="center")
+
+letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
+
+while len(letra) != 1:
+    letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
 
 
+if letra in escolhaPC:
     
-#letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
-
-#while len(letra) != 1:
-    #letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
-
-#if letra in escolhaPC:
-    #turtle.write
+    letras.write(letra, font=("Arial",20))
+    i = escolhaPC.index(letra)
     
-
-
+    print(i)
+    
+    
 
 
 
