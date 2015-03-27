@@ -62,13 +62,18 @@ for i in range(1):
 # Fazendo os espaços das letras
 
 for i in range(c):
-    grade.speed(500)
-    grade.color("blue")
-    grade.pendown()
-    grade.forward(30)
-    grade.penup()
-    grade.forward(10)
-    grade.pendown()
+    if escolhaPC[i] == " ":
+        grade.penup()
+        grade.forward(40)
+        grade.pendown()
+    else:    
+        grade.speed(500)
+        grade.color("blue")
+        grade.pendown()
+        grade.forward(30)
+        grade.penup()
+        grade.forward(10)
+        grade.pendown()
     
     
 ####################################################
@@ -160,7 +165,16 @@ while win < len(escolhaPC):
         letras.write(letra, font=("Arial",20))
         letras.pd()
         win+=1
-   
+        lista2 = []
+        for i in range(c):
+            if escolhaPC[i] == letra:
+                lista2.append(i)
+        for pos in lista2:
+            letras.pu()
+            letras.hideturtle()
+            letras.setpos(-175+40*(pos) ,0)
+            letras.write(letra, font=("Arial",20))
+                
    
     
     
