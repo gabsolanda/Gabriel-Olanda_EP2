@@ -53,7 +53,7 @@ for i in range(1):
     grade.forward(35)
     
     grade.penup()
-    grade.setpos(-185,0)
+    grade.setpos(-180,0)
     grade.left(90)
     
     
@@ -62,12 +62,12 @@ for i in range(1):
 # Fazendo os espaços das letras
 
 for i in range(c):
-    grade.speed(300)
+    grade.speed(500)
     grade.color("blue")
     grade.pendown()
-    grade.forward(20)
+    grade.forward(15)
     grade.penup()
-    grade.forward(17)
+    grade.forward(10)
     grade.pendown()
     
     
@@ -152,9 +152,12 @@ while len(letra) != 1:
 
 
 if letra in escolhaPC:
-    
+    letras.pu()
+    letras.setpos(-180+(i*25),0)
+    letras.pd()
     letras.write(letra, font=("Arial",20))
     i = escolhaPC.index(letra)
+    
     
     print(i)
     
