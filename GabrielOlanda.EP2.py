@@ -65,7 +65,7 @@ for i in range(c):
     grade.speed(500)
     grade.color("blue")
     grade.pendown()
-    grade.forward(15)
+    grade.forward(30)
     grade.penup()
     grade.forward(10)
     grade.pendown()
@@ -142,24 +142,29 @@ letras = turtle.Turtle()
 letras.pu()
 letras.setpos(-185,0)
 letras.pd()
-
+win = 0
 #letras.write("The forca mininu", True, align="center")
-
-letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
-
-while len(letra) != 1:
+while win < len(escolhaPC):
     letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
-
-
-if letra in escolhaPC:
-    letras.pu()
-    letras.setpos(-180+(i*25),0)
-    letras.pd()
-    letras.write(letra, font=("Arial",20))
-    i = escolhaPC.index(letra)
+    
+    while len(letra) != 1:
+        letra = window.textinput("Enforcando-se", "Escolha uma letra que acha que está na palavra.")
     
     
-    print(i)
+        
+    if letra in escolhaPC:
+        i = escolhaPC.index(letra)
+        print(i)
+        letras.pu()
+        letras.setpos(-175+40*i ,0)
+        letras.write(letra, font=("Arial",20))
+        letras.pd()
+        win+=1
+   
+   
+    
+    
+
     
     
 
