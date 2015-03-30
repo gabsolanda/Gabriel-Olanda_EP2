@@ -9,6 +9,14 @@ jogada = 1
 while jogada == 1:
     from random import choice
     import time
+    from unicodedata import normalize
+   
+    def remover_acentos(txt):
+        return normalize('NFKD', txt).encode('ASCII','ignore').decode('ASCII')
+   
+    if __name__ == '__main__':
+        from doctest import testmod
+        testmod()
     
     
     import turtle               # Iniciando e importando a biblioteca Turtle
@@ -30,8 +38,11 @@ while jogada == 1:
             Llimpa.append(t)
         
         
+    
     escolhaPCx = choice(Llimpa)
+    Llimpa.remove(escolhaPCx)
     escolhaPC = escolhaPCx.upper()
+    escolhaPC = remover_acentos(escolhaPC)
     c = len(escolhaPC)
     print(escolhaPC)
     
@@ -82,79 +93,7 @@ while jogada == 1:
         
         
     ####################################################
-    """    # Fazendo o corpo - Cabeça
-    cabeca = turtle.Turtle()
-    cabeca.color("white")
-    cabeca.pensize(2)
-    cabeca.penup()
-    cabeca.setpos(-220,93)
-    cabeca.pendown()
-    cabeca.circle(10)
-    """
-    
-    ####################################################
-    """ 
-       # Fazendo o corpo = Tórax
-    tor = turtle.Turtle()
-    tor.color("white")
-    tor.pensize(2)
-    tor.penup()
-    tor.setpos(-220,93)
-    tor.pd()
-    tor.right(90)
-    tor.forward(50)
-    """
-    
-    ####################################################
-    """   
-       # Fazendo o corpo = Perna da Direita
-    pernad = turtle.Turtle()
-    pernad.color("white")
-    pernad.pensize(2)
-    pernad.penup()
-    pernad.setpos(-220,43)
-    pernad.pd()
-    pernad.right(45)
-    pernad.forward(25)
-    """
-    
-    ####################################################
-    """
-        # Fazendo o corpo = Perna da Esquerda
-    pernae = turtle.Turtle()
-    pernae.color("white")
-    pernae.pensize(2)
-    pernae.penup()
-    pernae.setpos(-220,43)
-    pernae.pd()
-    pernae.right(135)
-    pernae.forward(25)
-    """
-    
-    ####################################################
-    """
-        # Fazendo o corpo = Braço da Direita
-    bracod = turtle.Turtle()
-    bracod.color("white")
-    bracod.pensize(2)
-    bracod.penup()
-    bracod.setpos(-220,75)
-    bracod.pd()
-    bracod.right(45)
-    bracod.forward(25)
-    """
-    ####################################################
-    """
-        # Fazendo o corpo = Braço da Esquerda
-    bracoe = turtle.Turtle()
-    bracoe.color("white")
-    bracoe.pensize(2)
-    bracoe.penup()
-    bracoe.setpos(-220,75)
-    bracoe.pd()
-    bracoe.right(135)
-    bracoe.forward(25)
-    """
+      # Definindo as funções de desenho estrutural corpóreo.
 
     bracod = turtle.Turtle()
     pernae = turtle.Turtle()
@@ -294,6 +233,7 @@ while jogada == 1:
                 letras.hideturtle()
                 letras.setpos(-175+40*(pos) ,0)
                 letras.write(letra, font=("Arial",20))
+                    
                     
        
         
