@@ -105,19 +105,21 @@ while jogada == 1:
     def boneco_enforcado(npartes):
     
         if npartes == 1:
-                
+                cabeca.ht()
                 cabeca.color("white")
                 cabeca.pensize(2)
                 cabeca.penup()
                 cabeca.setpos(-220,93)
                 cabeca.pendown()
                 cabeca.circle(10)
+                
                
                         
             
         if npartes == 2:
                 # Fazendo o corpo = Tórax
-                
+        
+                tor.ht()
                 tor.color("white")
                 tor.pensize(2)
                 tor.penup()
@@ -129,7 +131,8 @@ while jogada == 1:
             
         if npartes == 3:
                     # Fazendo o corpo = Perna da Direita
-                
+        
+                pernad.ht()
                 pernad.color("white")
                 pernad.pensize(2)
                 pernad.penup()
@@ -141,7 +144,8 @@ while jogada == 1:
                 
         if npartes == 4:
                     # Fazendo o corpo = Perna da Esquerda
-                
+        
+                pernae.ht()            
                 pernae.color("white")
                 pernae.pensize(2)
                 pernae.penup()
@@ -153,7 +157,7 @@ while jogada == 1:
                 
         if npartes == 5:
                     # Fazendo o corpo = Braço da Direita
-                
+                bracod.ht()
                 bracod.color("white")
                 bracod.pensize(2)
                 bracod.penup()
@@ -166,6 +170,7 @@ while jogada == 1:
         if npartes == 6:
                     # Fazendo o corpo = Braço da Esquerda
                 
+                bracoe.ht()
                 bracoe.color("white")
                 bracoe.pensize(2)
                 bracoe.penup()
